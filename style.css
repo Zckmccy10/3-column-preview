@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --blue: hsl(184, 100%, 22%);
+    --green: hsl(179, 100%, 13%);
+
+    --bg-color: hsl(0, 0%, 95%);
+    --text-color: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
+
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1em 0em;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+.container {
+    padding: 15em 22em;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.card {
+    flex: 1;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card p {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.sedans {
+    background-color: var(--orange);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.sedans .btn {
+    color: var(--orange);
+}
+
+.suvs {
+    background-color: var(--blue);
+}
+
+.suvs .btn {
+    color: var(--blue);
+}
+
+.luxury {
+    background-color: var(--green);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.luxury .btn {
+    color: var(--green);
+}
+
+.luxury .btn:active, .luxury .btn:hover {
+    background-color: var(--green);
+    color: white;
+    border: 3px solid white;
+}
+
+.btn {
+    margin-top: 4em;
+    padding: 1em 2em;
+    border-radius: 30px;
+    background-color: white;
+}
+
+@media(max-width: 1250px){
+    .container {
+        padding: 3em 6em;
+    }
+}
+
+
+
+@media(max-width: 560px){
+    .container {
+        padding: 1em 2em;
+    }
+
+    .sedans {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+    }
+
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+}
